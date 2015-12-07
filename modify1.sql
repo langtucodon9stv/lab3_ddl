@@ -15,7 +15,7 @@ create table bilet(
     film_id int not null,
     cinema_id int not null,
     price float not null, 
-    date_reply varchar(10) NOT NULL
+    date_reply date
 );
 alter table bilet add constraint bilet_fk0 foreign key (film_id) references film(film_id);
 alter table bilet add constraint bilet_fk1 foreign key (cinema_id) references cinema1(cinema_id);

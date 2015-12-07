@@ -20,7 +20,7 @@ create table film (
  CREATE TABLE Viewer (
     Viewer_id INT NOT NULL PRIMARY KEY,
     Name varchar(16),
-    Birthday varchar(16),
+    Birthday date,
     Adress VARCHAR(255),
     Number_telephone VARCHAR(16)
 );
@@ -32,7 +32,7 @@ CREATE TABLE Request (
     Viewer_id INT NOT NULL,
     Film_id INT NOT NULL,
     Price float NOT NULL,
-    Date_supply_request varchar(16) NOT NULL
+    Date_supply_request date
 );
 
 CREATE TABLE Film_company (
@@ -51,8 +51,8 @@ CREATE TABLE Film_person (
 CREATE TABLE Person (
     Person_id INT NOT NULL PRIMARY KEY,
     Name varchar(32) NOT NULL,
-    birthday varchar(16) NOT NULL,
-    Place_birth VARCHAR(255) NOT NULL,
+    birthday date,
+    Place_birth varchar(16),
     Hight INT NOT NULL,
     Character_id int NOT NULL
 );
